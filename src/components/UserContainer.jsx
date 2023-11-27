@@ -4,10 +4,11 @@ import { getAsyncUsers } from "../features/user/userReducer";
 
 function UserContainer() {
   const dispatch = useDispatch();
-  const { loading, error, data } = useSelector((state) => state.users);
+  const { loading, error, data } = useSelector((state) => state.user);
 
   useEffect(() => {
     dispatch(getAsyncUsers({ id: 1, name: "erfan" }));
+
   }, [dispatch]);
 
   return (

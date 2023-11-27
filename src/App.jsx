@@ -3,12 +3,14 @@ import "./App.css";
 import store from "./features/store";
 import AppleContainer from "./components/appleContainer";
 import BananaContainer from "./components/bananaContainer";
+import UserContainer from "./components/UserContainer";
 
 function App() {
   return (
     <Provider store={store}>
       <AppleContainer />
       <BananaContainer />
+      <UserContainer/>
     </Provider>
   );
 }

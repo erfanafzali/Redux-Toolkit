@@ -11,7 +11,8 @@ export const getAsyncUsers = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users" , payload
+        "https://jsonplaceholder.typicode.com/users",
+        payload
       );
       return data;
     } catch (error) {
@@ -41,7 +42,7 @@ const userReducer = createSlice({
       state.error = "";
     },
     [getAsyncUsers.rejected]: (state, action) => {
-      state.loading = true;
+      state.loading = false;
       state.data = [];
       state.error = action.payload;
     },

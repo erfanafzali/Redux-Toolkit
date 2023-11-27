@@ -11,7 +11,7 @@ export const getAsyncUsers = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const { data } = await axios.get(
-        "https://jsonplaceholder.typicode.com/users"
+        "https://jsonplaceholder.typicode.com/users" , payload
       );
       return data;
     } catch (error) {

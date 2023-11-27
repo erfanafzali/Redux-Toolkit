@@ -6,11 +6,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import appleReducer from "./apple/appleReducer";
 import bananaReducer from "./banana/bananaReducer";
+import userReducer from "./user/userReducer";
 
 const store = configureStore({
   reducer: {
     apple: appleReducer,
     banana: bananaReducer,
+    user: userReducer,
   },
 });
 
